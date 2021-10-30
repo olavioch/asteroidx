@@ -9,10 +9,11 @@
 </head>
 <body>
     <div class="container">
-        <a href="" class="container_sair">XSAIR</a>
+        <a class="container_sair" onclick="Sair()">XSAIR</a>
         <h1 class="container_user">Nome do Jogador</h1>
         <!-- tela1 termos-->
-    <section class="termos">
+    
+        <section class="termos" id="termos">
         <h1 class="termos_title">Termos de usuario</h1>
         <p class="termos_desc">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -21,25 +22,25 @@
             remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
             and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         </p>
-        <input class="termos_box" type="checkbox" name="" id=""/>
+        <input class="termos_box" type="checkbox" name="" id="check"/>
         <span class="termos_termo">aceito os termos</span>
-        <button class="termos_button">Entrar</button>
+        <button class="termos_button" onclick="AceitaTermos()">Entrar</button>
     </section>
 
     <!--tela 2 menu-->
-    <section class="menu">
+    <section class="menu" id="menu">
         <h1 class="menu_title">Asteroids</h1>
        <div class="menu_list">
-            <a href="">new game</a>
-            <a href="">rank</a>
-            <a href="">continua</a>
-            <a href="">configurações</a>
-            <a href="">exit</a>
+            <a onclick="Menu('newgame', true)">new game</a>
+            <a onclick="Menu('rank')">rank</a>
+            <a onclick="Menu('continue', false)">continua</a>
+            <a onclick="Menu('config')">configurações</a>
+            <a>exit</a>
        </div>
     </section>
     
     <!--tela 3 rank-->
-    <section class="rank">
+    <section class="rank" id="rank">
         <h1 class="rank_title">rank</h1>
        <div class="rank_items">
             <div class="rank_item">
@@ -74,8 +75,8 @@
     </section>
 
      <!--tela 2 -->
-     <section class="world">
-       <div class="world_list">
+     <section class="world" >
+       <div class="world_list" id="world">
             <div class="world_item">
                 <img src="nivel/nivel1.jpg" alt="" class="world_back">
                 <p class="world_title"> world1</p>
@@ -89,7 +90,7 @@
                 <p class="world_title"> world1</p>
             </div>
        </div>
-       <div class="addUser">
+       <div class="addUser" id="addUser">
             <div class="addUser_main">
                 <h1>novo jogador</h1>
                 <input type="text" name="" id=""/>
@@ -97,6 +98,50 @@
             </div>
        </div>
     </section>
+
+    <section class="config" id="config">
+        <div class="config_tela">
+            <p class="config--selected">geral</p>
+            <p>som</p>
+            <p>video</p>
+        </div>
+        <div class="config_geral">
+             <h1>configurar joystick</h1>
+             <div class="config_joy" id="controle">
+                 <div class="config_esc">
+                     <span>left</span><button>ok</button>
+                 </div>
+                 <div class="config_esc">
+                    <span>right</span><button>ok</button>
+                </div>
+                <div class="config_esc">
+                    <span>up</span><button>ok</button>
+                </div>
+                <div class="config_esc">
+                    <span>down</span><button>ok</button>
+                </div>
+             </div>
+        </div>
+        <div class="config_som" id="som">
+            <h1>configurar som</h1>
+            <div class=" config_set">
+                <p>musica</p>
+                <input type="range" name="" class="range">
+                <p>efeitos sonoros</p>
+                <input type="range" name="" class="range">
+            </div>
+       </div>
+       <div class="config_video" id="video">
+        <h1>configurar som</h1>
+        <div class=" config_set">
+            <p>musica</p>
+            <input type="range" name="" class="range">
+            <p>efeitos sonoros</p>
+            <input type="range" name="" class="range">
+        </div>
+   </div>
+     </section>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

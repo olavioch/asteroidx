@@ -6,7 +6,9 @@ body{
     padding: 0;
     margin: 0;
 }
-
+a{
+    cursor: pointer;
+}
 .container{
     height: 100vh;
     background-image: url(menu/backgroundMenu.jpg);
@@ -31,11 +33,12 @@ body{
     right: inherit;
     text-decoration: none;
     color: white;
+    display: none;/*display block*/
 }
 
 /*tela de termos */
 .termos{
-    display: none; /*display block*/
+    display: block; /*display block*/
     background-color: #000000a6;
     border-radius: 30px;
     width: 20%;
@@ -66,6 +69,7 @@ body{
     text-decoration:none;
     text-align: center;
     font-size: 22px;
+    cursor: pointer;
 }
 
 /*tela de rank*/
@@ -100,7 +104,7 @@ body{
 
 /*tela de world*/
 .world .world_list{
-    display: flex;
+    display: none;/*display none*/
 }
 .world .world_item:nth-child(2){
     transform: scale(1.5);
@@ -168,3 +172,82 @@ body{
     margin-top: 30px;
     cursor: pointer;
 }
+
+/*tela configurações*/
+.config{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.config .config_geral, .config .config_tela, .config .config_som, .config .config_video{
+    background-color: rgba(0, 0, 0, 0.815);
+}
+.config .config_tela{
+    height: 90vh;
+    font-size:35px;
+    font-family: gagalian;
+    padding: 10vh 50px 0;
+}
+.config .config_geral h1{
+    margin-bottom: 40px;
+}
+.config .config_geral{
+    margin: auto;
+    width: 60vw;
+    height: 50vh;
+    display: none;/*flex*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.config .config_joy{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 50%;
+    text-align: center;
+    font-size: 25px;
+}
+.config button{
+    font-size: 25px;
+    margin-left: 30px;
+}
+.config .config_esc{
+    margin-bottom: 20px;
+}
+.config .config--selected{
+    background-color: blueviolet;
+    padding: 0 30px 0 10px;
+}
+.config .config_tela p{
+    margin-right: -70px;    
+}
+
+.config .config_som{
+    margin: auto;
+    width: 60vw;
+    height: 50vh;
+    display: none;/*flex*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.config .config_set{
+    width: 50%;
+    font-size: 20px;
+}
+.config .range{
+    width: 100%;
+}
+
+.config .config_video{
+    margin: auto;
+    width: 60vw;
+    height: 50vh;
+    display: flex;/*flex*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
