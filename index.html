@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <a class="container_sair" onclick="Sair()">XSAIR</a>
-        <h1 class="container_user">Nome do Jogador</h1>
+        <h1 class="container_user" id="containerUser"></h1>
         <!-- tela1 termos-->
     
         <section class="termos" id="termos">
@@ -83,18 +83,26 @@
             </div>
             <div class="world_item">
                 <img src="nivel/nivel2.jpg" alt="" class="world_back">
-                <p class="world_title"> world1</p>
+                <p class="world_title"> world2</p>
             </div>
             <div class="world_item">
                 <img src="nivel/nivel3.jpg" alt="" class="world_back">
-                <p class="world_title"> world1</p>
+                <p class="world_title"> world3</p>
+            </div>
+       </div>
+       <div class="world_options" id="worldOptions">
+           <div>
+                <img src="menu/direcaoModal.png" onclick='MoverModal("esquerda")' id="esquerda"/>
+           </div>
+           <div>
+                <img src="menu/direcaoModal.png" onclick="MoverModal('direita')" id='direita'/>
             </div>
        </div>
        <div class="addUser" id="addUser">
             <div class="addUser_main">
                 <h1>novo jogador</h1>
-                <input type="text" name="" id=""/>
-                <button>Salvar </button>
+                <input type="text" name="" id="inputUser"/>
+                <button onclick="CadastrarNome(false)">Salvar </button>
             </div>
        </div>
     </section>

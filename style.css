@@ -18,6 +18,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 .container .container_sair{
     position: fixed;
@@ -106,9 +107,7 @@ a{
 .world .world_list{
     display: none;/*display none*/
 }
-.world .world_item:nth-child(2){
-    transform: scale(1.5);
-}
+
 .world .world_item:first-child{
     margin-right: 50px;
 }
@@ -125,6 +124,26 @@ a{
     text-align: center;
     font-family: gagalian;
     font-size: 25px;
+}
+.world .world_options{
+    width: 100%;
+    display: none;/*flex*/
+    justify-content: space-between;
+}
+.world .world_options img{
+    width: 100px;
+    height: 50px;
+}
+.world .world_options div:last-child img{
+transform: scaleX(-1);
+}
+.world .word--scale{
+    transform: scale(1.5);
+    z-index: 1;
+}
+.world .word--nscale{
+    transform: scale(1);
+    z-index: 0;
 }
 
 /* tela adduser*/
